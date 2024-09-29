@@ -13,10 +13,10 @@
     font-family: 'Arial', sans-serif;
 }
 
-#home {
+/* #home {
     background-color: #f8f9fa;
     
-}
+} */
 
 h1, h2 {
     color: #333;
@@ -24,65 +24,99 @@ h1, h2 {
 .collapse {
     justify-content: space-around;
 }
+.nav-item::hower{
+color:#0DCAF0 ;
+}
 
+.navbar{
+    background-color: #011936;
+}
+.home{
+    background-color:#011936; 
+}
+.about{
+    background-color:#465362
+}
+.project{
+    background-color: #82A3A1;
+}
+.skill{
+    background-color: #9FC490;
+}
+.contact{
+    background-color: #C0DFA1;
+}
     </style>
 </head>
 <body>
     <!-- Navigation Bar -->
-<nav class="navbar navbar-expand-lg bg-body-tertiary " >
-    <div class="container-fluid">
-    <a class="navbar-brand" href="#">My Portfolio</a>
+<nav class="navbar navbar-expand-lg  " >
+    <div class="container-fluid ">
+    <a class="navbar-brand text-light my-1 mx-2" href="#">My Portfolio</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav">
+        <ul class="navbar-nav d-flex justify-content-evenly">
         <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#home">Home</a>
+            <a class="nav-link active text-light my-1 mx-3" aria-current="page" href="#home">Home</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="#about">About</a>
+            <a class="nav-link text-light my-1 mx-3" href="#about">About</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="#projects">Projects</a>
+            <a class="nav-link text-light my-1 mx-3" href="#projects">Projects</a>
         </li>
         <li class="nav-item"></li>
-            <a class="nav-link" href="#cartificates">Cartificates</a>
+            <a class="nav-link text-light my-1 mx-3" href="#skill">Skills</a>
         </li>
         
         <li class="nav-item"></li>
-            <a class="nav-link" href="#contact">Contact</a>
+            <a class="nav-link text-light my-1 mx-3" href="#contact">Contact Me</a>
         </li>
         </ul>
+        <form class="d-flex" role="search">
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-info" type="submit">Search</button>
+        </form>
     </div>
     </div>
 </nav>
     <!-- Home Section -->
-    <section id="home" class="text-center">
-        <div class="container">
+    <section id="home" class=" home ">
+        <div class="container-fluid vh-100">
             <div class="row">
-                <div class="col-md-5 vh-100 ">
-                    <h1 >ayushi</h1>
-                </div>
+                <div class="col-md-6 vh-100 mt-5">
+                    <h1 class="text-light text-start">Hello!</h1>
+                    <h1 class="h-home text-light text-start">I'm Ayushi Chaudhari</h1>
+                    <p class="p-home text-light text-start">" I'm a Fresher in IT sector and continuously expanding my skills in building dynamic websites. I also have a growing interest in data analytics, aiming to combine both fields to create insightful and impactful solutions."</p>
+                    <a href="https://github.com/Ayushi0004" type="button" class="btn btn-outline-light m-2 ">GitHub</a>
+                    <a href="https://www.linkedin.com/in/ayushi-chaudhari-b56b102ba/" type="button" class="btn btn-outline-light m-2 ">LinkedIn</a>
+            </div>
 
-                <div class="col-md-7 bg-primary "></div>
-                    <img src="" alt="my image">
+                <div class="col-md-6  ">
+                    <img src="my.jpg" alt="my image">
                 </div>
             </div>
         </div>
     </section>
 
     <!-- About Section -->
-    <section id="about" class="py-5">
-        <div class="container">
-            <h2>About Me</h2>
-            <p>I am a data analyst and aspiring web developer. Here's more about me.</p>
+    <section id="about" class=" about py-5 text-light ">
+        <div class="container-fluid vh-100">
+            <h2 class="h ms-5 me-5 text-light">About Me</h2>
+            <p class="p ms-5 me-5">Hi, I'm Ayushi, a fresher and currently a Bachelor of Computer Applications (BCA) student. I'm passionate about technology, with a strong interest in web development and data analytics. During my web development journey, I completed a course focused on Django, where I learned how to build dynamic and user-friendly applications. I have a passion for data analytics and aspire to become a data analyst in the future. Beyond technology, I'm passionate about travelling and enjoy listen music.</p>
+            <h4 class="h ms-5 me-5 mb-3">I've worked on three major projects using Django:</h4>
+            <p class="p ms-5 me-5">1.Authentication Page: Developed a user authentication system featuring login and registration forms.</p>
+                <p class="p ms-5 me-5">2.Travel Blogs: Created a travel blog website where users can share their travel experiences by posting articles.</p>
+                <p class="p ms-5 me-5"> 3.Sasti Dukaan: Built an e-commerce website where users can buy and sell their products.</p>
+                <p class="p ms-5 me-5">I'm excited to continue learning, growing, and contributing to projects that solve real-world challenges. I'm currently looking for opportunities to enhance my skills and gain industry experience in web development and data analytics.</p>
         </div>
     </section>
 
     <!-- Projects Section -->
-    <section id="projects" class="py-5 bg-light">
-        <div class="container">
+    <section id="projects" class="project py-5">
+        <div class="container-fluid vh-100">
             <h2>Projects</h2>
             <div class="row">
                 <div class="col-md-4">
@@ -116,36 +150,36 @@ h1, h2 {
         </div>
     </section>
 
-    <!-- cartificates section -->
+    <!-- skills section -->
         
-    <section id="cartificates" class="py-5">
-        <div class="container">
-            <h2>Cartificates</h2>
+    <section id="skill" class="skill py-5">
+        <div class="container-fluid vh-100">
+            <h2>Skills</h2>
             <div class="row">
                 <div class="col-md-4">
                     <div class="card">
-                        <img src="cartificate1.jpg" class="card-img-top" alt="cartificate1 1">
+                        <img src="skill1.jpg" class="card-img-top" alt="skill1 1">
                         <div class="card-body">
-                            <h5 class="card-title">cartificate 1</h5>
-                            <p class="card-text">Description of cartificate1 1.</p>
+                            <h5 class="card-title">Skill 1</h5>
+                            <p class="card-text">Description of skill1 1.</p>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-4">
                     <div class="card">
-                        <img src="cartificate 2.jpg" class="card-img-top" alt="cartificate 2">
+                        <img src="skill 2.jpg" class="card-img-top" alt="skill 2">
                         <div class="card-body">
-                            <h5 class="card-title">cartificate 2</h5>
-                            <p class="card-text">Description of cartificate 2.</p>
+                            <h5 class="card-title">skill 2</h5>
+                            <p class="card-text">Description of skill 2.</p>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-4">
                     <div class="card">
-                        <img src="cartificate 3.jpg" class="card-img-top" alt="cartificate 3">
+                        <img src="skill 3.jpg" class="card-img-top" alt="skill 3">
                         <div class="card-body">
-                            <h5 class="card-title">cartificate 3</h5>
-                            <p class="card-text">Description of cartificate 3.</p>
+                            <h5 class="card-title">skill 3</h5>
+                            <p class="card-text">Description of skill 3.</p>
                         </div>
                     </div>
                 </div>
@@ -155,8 +189,8 @@ h1, h2 {
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="py-5">
-        <div class="container">
+    <section id="contact" class="contact py-5">
+        <div class="container-fluid vh-100">
             <h2>Contact Me</h2>
             <form method="POST">
                 {% csrf_token %}

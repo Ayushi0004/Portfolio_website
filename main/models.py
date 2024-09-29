@@ -25,15 +25,13 @@ class Project(models.Model):
     def __str__(self):
         return self.title
 
-class Certificate(models.Model):
-    title = models.CharField(max_length=200)
-    issuing_organization = models.CharField(max_length=200)
-    issue_date = models.DateField()
-    certificate_file = models.FileField(upload_to='certificates/', blank=True, null=True)
+class Skill(models.Model):
+    name = models.CharField(max_length=100)
+    proficiency = models.IntegerField(help_text="Enter proficiency level from 1 to 10")
     description = models.TextField(blank=True, null=True)
 
     def __str__(self):
-        return f"{self.title} from {self.issuing_organization}"
+        return self.name
 
 class Contact(models.Model):
     email = models.EmailField()
