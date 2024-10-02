@@ -46,6 +46,9 @@ color:#0DCAF0 ;
 .contact{
     background-color: #C0DFA1;
 }
+.certificate{
+    background-color: #6F9283;
+}
     </style>
 </head>
 <body>
@@ -64,12 +67,17 @@ color:#0DCAF0 ;
         <li class="nav-item">
             <a class="nav-link text-light my-1 mx-3" href="#about">About</a>
         </li>
-        <li class="nav-item">
-            <a class="nav-link text-light my-1 mx-3" href="#projects">Projects</a>
+        <li class="nav-item"></li>
+            <a class="nav-link text-light my-1 mx-3" href="#certificates">Certificates</a>
         </li>
         <li class="nav-item"></li>
             <a class="nav-link text-light my-1 mx-3" href="#skill">Skills</a>
         </li>
+        <li class="nav-item">
+            <a class="nav-link text-light my-1 mx-3" href="#projects">Projects</a>
+        </li>
+        
+        
         
         <li class="nav-item"></li>
             <a class="nav-link text-light my-1 mx-3" href="#contact">Contact Me</a>
@@ -114,38 +122,56 @@ color:#0DCAF0 ;
         </div>
     </section>
 
+    <!-- cartificates Section -->
+    <section id="certificates" class="certificate py-5">
+        <div class="container-fluid vh-100">
+            <h2>Certificates</h2>
+            <div class="row">
+                
+                {% for item in certificates %}
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="{{item.image.url}}" class="card-img-top" alt="cartificate 1">
+                        <div class="card-body">
+                            <h5 class="card-title">{{item.course_name}}</h5>
+                            <p class="card-text">{{item.certificate_id}}</p>
+                            <p class="card-text">{{item.grade}}</p>
+                        </div>
+                    </div>
+                </div>
+                {% empty %}
+                    
+                {% endfor %}
+                    
+                
+                
+            </div>
+        </div>
+    </section>
+
     <!-- Projects Section -->
     <section id="projects" class="project py-5">
         <div class="container-fluid vh-100">
             <h2>Projects</h2>
             <div class="row">
+                
+                {% for item in projects %}
                 <div class="col-md-4">
                     <div class="card">
-                        <img src="project1.jpg" class="card-img-top" alt="Project 1">
+                        <img src="{{item.image.url}}" class="card-img-top" alt="Project 1">
                         <div class="card-body">
-                            <h5 class="card-title">Project 1</h5>
-                            <p class="card-text">Description of project 1.</p>
+                            <h5 class="card-title">{{item.title}}</h5>
+                            <p class="card-text">{{item.description}}</p>
+                            <a href="#" class="btn btn-primary">explor</a>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4">
-                    <div class="card">
-                        <img src="project2.jpg" class="card-img-top" alt="Project 2">
-                        <div class="card-body">
-                            <h5 class="card-title">Project 2</h5>
-                            <p class="card-text">Description of project 2.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card">
-                        <img src="project3.jpg" class="card-img-top" alt="Project 3">
-                        <div class="card-body">
-                            <h5 class="card-title">Project 3</h5>
-                            <p class="card-text">Description of project 3.</p>
-                        </div>
-                    </div>
-                </div>
+                {% empty %}
+                    
+                {% endfor %}
+                    
+                
+                
             </div>
         </div>
     </section>
@@ -156,33 +182,19 @@ color:#0DCAF0 ;
         <div class="container-fluid vh-100">
             <h2>Skills</h2>
             <div class="row">
+                {% for item in skills %}
                 <div class="col-md-4">
                     <div class="card">
-                        <img src="skill1.jpg" class="card-img-top" alt="skill1 1">
+                        <img src="{{item.image.url}}" class="card-img-top" alt="skill 1">
                         <div class="card-body">
-                            <h5 class="card-title">Skill 1</h5>
-                            <p class="card-text">Description of skill1 1.</p>
+                            <h5 class="card-title">{{title.name}}</h5>
+                            <p class="card-text">{{title.description}}</p>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4">
-                    <div class="card">
-                        <img src="skill 2.jpg" class="card-img-top" alt="skill 2">
-                        <div class="card-body">
-                            <h5 class="card-title">skill 2</h5>
-                            <p class="card-text">Description of skill 2.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card">
-                        <img src="skill 3.jpg" class="card-img-top" alt="skill 3">
-                        <div class="card-body">
-                            <h5 class="card-title">skill 3</h5>
-                            <p class="card-text">Description of skill 3.</p>
-                        </div>
-                    </div>
-                </div>
+                {% empty %}
+                    
+                {% endfor %}
             </div>
 
         </div>
