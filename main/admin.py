@@ -1,7 +1,7 @@
 from django.contrib import admin
-from main.models import Certificates, Project, Skill, Contact
+from main.models import Project, Skill
 
-admin.site.register(Certificates)
+
 admin.site.register(Project)
 admin.site.register(Skill)
-admin.site.register(Contact)
+# admin.site.register(Contact)

@@ -1,229 +1,151 @@
+{% load static %}
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>My Portfolio</title>
-    <!-- Bootstrap CSS -->
+    <title>Portfolio</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-    <style>
-        body {
-    font-family: 'Arial', sans-serif;
-}
-
-/* #home {
-    background-color: #f8f9fa;
-    
-} */
-
-h1, h2 {
-    color: #333;
-}
-.collapse {
-    justify-content: space-around;
-}
-.nav-item::hower{
-color:#0DCAF0 ;
-}
-
-.navbar{
-    background-color: #011936;
-}
-.home{
-    background-color:#011936; 
-}
-.about{
-    background-color:#465362
-}
-.project{
-    background-color: #82A3A1;
-}
-.skill{
-    background-color: #9FC490;
-}
-.contact{
-    background-color: #C0DFA1;
-}
-.certificate{
-    background-color: #6F9283;
-}
-    </style>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <script src="script.js" defer></script>
 </head>
 <body>
-    <!-- Navigation Bar -->
-<nav class="navbar navbar-expand-lg  " >
-    <div class="container-fluid ">
-    <a class="navbar-brand text-light my-1 mx-2" href="#">My Portfolio</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav d-flex justify-content-evenly">
-        <li class="nav-item">
-            <a class="nav-link active text-light my-1 mx-3" aria-current="page" href="#home">Home</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link text-light my-1 mx-3" href="#about">About</a>
-        </li>
-        <li class="nav-item"></li>
-            <a class="nav-link text-light my-1 mx-3" href="#certificates">Certificates</a>
-        </li>
-        <li class="nav-item"></li>
-            <a class="nav-link text-light my-1 mx-3" href="#skill">Skills</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link text-light my-1 mx-3" href="#projects">Projects</a>
-        </li>
-        
-        
-        
-        <li class="nav-item"></li>
-            <a class="nav-link text-light my-1 mx-3" href="#contact">Contact Me</a>
-        </li>
-        </ul>
-        <form class="d-flex" role="search">
-            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-            <button class="btn btn-outline-info" type="submit">Search</button>
-        </form>
-    </div>
-    </div>
-</nav>
-    <!-- Home Section -->
-    <section id="home" class=" home ">
-        <div class="container-fluid vh-100">
-            <div class="row">
-                <div class="col-md-6 vh-100 mt-5">
-                    <h1 class="text-light text-start">Hello!</h1>
-                    <h1 class="h-home text-light text-start">I'm Ayushi Chaudhari</h1>
-                    <p class="p-home text-light text-start">" I'm a Fresher in IT sector and continuously expanding my skills in building dynamic websites. I also have a growing interest in data analytics, aiming to combine both fields to create insightful and impactful solutions."</p>
-                    <a href="https://github.com/Ayushi0004" type="button" class="btn btn-outline-light m-2 ">GitHub</a>
-                    <a href="https://www.linkedin.com/in/ayushi-chaudhari-b56b102ba/" type="button" class="btn btn-outline-light m-2 ">LinkedIn</a>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light  shadow-sm">
+        <div class="container mt-2">
+            <a class=" text-light navbar-brand" href="#">MyPortfolio</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end text-light" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+					<li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                </ul>
             </div>
+        </div>
+    </nav>
 
-                <div class="col-md-6  ">
-                    <img src="my.jpg" alt="my image">
-                </div>
-            </div>
+    <!-- Home Section -->
+    <section id="home" class="text-center d-flex align-items-center">
+        <div class="container">
+            <h1 class="display-4">Hello,  <br><span class="text-primary ">I'm Ayushi Chaudhari</span></h1>
+            <p class="lead" ><br>I’m killed in Django and modern web technologies. I bring creativity and precision to every project I work on, transforming complex ideas into seamless, efficient web solutions.</p>
+            <a href="#projects"class="btn btn-primary mt-4">View My Work</a><br>
+			
         </div>
     </section>
 
     <!-- About Section -->
-    <section id="about" class=" about py-5 text-light ">
-        <div class="container-fluid vh-100">
-            <h2 class="h ms-5 me-5 text-light">About Me</h2>
-            <p class="p ms-5 me-5">Hi, I'm Ayushi, a fresher and currently a Bachelor of Computer Applications (BCA) student. I'm passionate about technology, with a strong interest in web development and data analytics. During my web development journey, I completed a course focused on Django, where I learned how to build dynamic and user-friendly applications. I have a passion for data analytics and aspire to become a data analyst in the future. Beyond technology, I'm passionate about travelling and enjoy listen music.</p>
-            <h4 class="h ms-5 me-5 mb-3">I've worked on three major projects using Django:</h4>
-            <p class="p ms-5 me-5">1.Authentication Page: Developed a user authentication system featuring login and registration forms.</p>
-                <p class="p ms-5 me-5">2.Travel Blogs: Created a travel blog website where users can share their travel experiences by posting articles.</p>
-                <p class="p ms-5 me-5"> 3.Sasti Dukaan: Built an e-commerce website where users can buy and sell their products.</p>
-                <p class="p ms-5 me-5">I'm excited to continue learning, growing, and contributing to projects that solve real-world challenges. I'm currently looking for opportunities to enhance my skills and gain industry experience in web development and data analytics.</p>
-        </div>
-    </section>
-
-    <!-- cartificates Section -->
-    <section id="certificates" class="certificate py-5">
-        <div class="container-fluid vh-100">
-            <h2>Certificates</h2>
-            <div class="row">
-                
-                {% for item in certificates %}
-                <div class="col-md-4">
-                    <div class="card">
-                        <img src="{{item.image.url}}" class="card-img-top" alt="cartificate 1">
-                        <div class="card-body">
-                            <h5 class="card-title">{{item.course_name}}</h5>
-                            <p class="card-text">{{item.certificate_id}}</p>
-                            <p class="card-text">{{item.grade}}</p>
-                        </div>
-                    </div>
+    <section id="about" class="pt-5 pb-5 m-4 bg-black text-light ">
+        <div class="container vh-100">
+            <div class="row ">
+                <div class="col-lg-8">
+                    <h2 class="p-2">About Me</h2>
+                    <p class="p-3 fs-5 fw-light">Hi, I'm Ayushi, a fresher and currently a Bachelor of Computer Applications (BCA) student. I'm passionate about technology, with a strong interest in web development and data analytics. During my web development journey, I completed a course focused on Django, where I learned how to build dynamic and user-friendly applications. I have a passion for data analytics and aspire to become a data analyst in the future. Beyond technology, I'm passionate about travelling and enjoy listen music.</p>
+                    <div class="container p-2 ">
+						<a href="https://www.linkedin.com/in/ayushi-chaudhari-b56b102ba/" target="_blank" class="btn btn-outline-primary m-4"><i class="fa-brands fa-linkedin-in"></i></a>
+						<a href="https://github.com/Ayushi0004" target="_blank" class="btn btn-outline-primary m-4"><i class="fa-brands fa-github"></i></a>
+						<a href="/" target="_blank" class="btn btn-outline-primary m-4"><i class="fa-brands fa-twitter"></i></a>
+						<a href="https://www.instagram.com/its_ayushi97/?hl=es-la%C2%A0" target="_blank" class="btn btn-outline-primary m-4"><i class="fa-brands fa-instagram"></i></a><br>
+						<div class="cv ms-3">
+							<a href="/" target="_blank" class="rounded-pill btn btn-primary mt-4">Downlode CV</a>
+						</div>
+					</div>
+				</div>
+				
+				<div class="  col-md-4  mt-5 ">
+                    <img class="mg-fluid rounded-circle  shadow-sm" src=" {% static 'images/my.jpg' %}" alt="Profile Image">
                 </div>
-                {% empty %}
-                    
-                {% endfor %}
-                    
-                
-                
             </div>
         </div>
     </section>
 
     <!-- Projects Section -->
-    <section id="projects" class="project py-5">
-        <div class="container-fluid vh-100">
-            <h2>Projects</h2>
+    <section id="projects" class=" pt-5 pb-5">
+        <div class="container">
+            <h2 class="text-center text-primary mb-5">Projects</h2>
             <div class="row">
-                
-                {% for item in projects %}
-                <div class="col-md-4">
-                    <div class="card">
-                        <img src="{{item.image.url}}" class="card-img-top" alt="Project 1">
+                {% for project in projects %}
+                <div class="col-md-4 mb-4">
+                    <div class="card shadow-sm">
+                        <img src="{{project.image.url}}" class="card-img-top" alt="{{ project.title }}">
                         <div class="card-body">
-                            <h5 class="card-title">{{item.title}}</h5>
-                            <p class="card-text">{{item.description}}</p>
-                            <a href="#" class="btn btn-primary">explor</a>
+                            <h5 class="card-title">{{ project.title }}</h5>
+                            <p class="card-text">{{ project.description }}</p>
+                            <div class="d-grid gap-2 col-6 mx-auto">
+                                <a href="{{ project.link }}" class="btn btn-primary" target="_blank" type="button">Explor</a>
+                            </div>
                         </div>
                     </div>
                 </div>
-                {% empty %}
-                    
                 {% endfor %}
-                    
-                
-                
             </div>
         </div>
     </section>
 
-    <!-- skills section -->
-        
-    <section id="skill" class="skill py-5">
-        <div class="container-fluid vh-100">
-            <h2>Skills</h2>
+	<!-- skills Section -->
+    <section id="skills" class="pt-5 pb-5">
+        <div class="container">
+            <h2 class="text-center text-primary mb-5">Skills</h2>
             <div class="row">
-                {% for item in skills %}
-                <div class="col-md-4">
-                    <div class="card">
-                        <img src="{{item.image.url}}" class="card-img-top" alt="skill 1">
-                        <div class="card-body">
-                            <h5 class="card-title">{{title.name}}</h5>
-                            <p class="card-text">{{title.description}}</p>
-                        </div>
-                    </div>
+                {% for skill in skills %}
+                <div class=" skill2 col-md-3 text-center mb-4">
+                        <!-- <div class="card shadow-sm">
+                        <img src="{% static skill.image %}" class="card-img-top" alt="{{ skill.title }}"> 
+                        <div class="card-body"> -->
+                            <button class="card-title m-3">{{ skill.name }}</button>
+                            <p class="card-text">{{ skill.description }}</p> 
+                        <!-- </div>
+                    </div> -->
                 </div>
-                {% empty %}
-                    
                 {% endfor %}
             </div>
-
         </div>
-    </section>
+    </section> 
 
+    
     <!-- Contact Section -->
-    <section id="contact" class="contact py-5">
-        <div class="container-fluid vh-100">
-            <h2>Contact Me</h2>
-            <form method="POST">
-                {% csrf_token %}
-                <div class="mb-3">
-                    <label for="name" class="form-label">Name</label>
-                    <input type="text" class="form-control" id="name">
+    <section id="contact" class="bg-black pt-5 pb-5">
+        <div class="container">
+            <h2 class="text-center text-primary ">Contact Me</h2>
+            <div class="row justify-content-center">
+                <div class="col-md-6">
+                    <form>
+                        <div class="mb-3">
+                            <label for="name" class="form-label">Name</label>
+                            <input type="text" class="form-control" id="name" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Email</label>
+                            <input type="email" class="form-control" id="email" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="message" class="form-label">Message</label>
+                            <textarea class="form-control" id="message" rows="4" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary w-100">Send Message</button>
+                    </form>
                 </div>
-                <div class="mb-3">
-                    <label for="email" class="form-label">Email</label>
-                    <input type="email" class="form-control" id="email">
-                </div>
-                <div class="mb-3">
-                    <label for="message" class="form-label">Message</label>
-                    <textarea class="form-control" id="message" rows="3"></textarea>
-                </div>
-                <button type="submit" class="btn btn-primary">Submit</button>
-            </form>
+            </div>
         </div>
     </section>
 
-    <!-- Bootstrap JS -->
+    <!-- Footer -->
+    <footer class="bg-dark text-white text-center p-3">
+        <p>Copyright &copy; 2024 By Ayushi Chaudhari. All rights reserved.</p>
+    </footer>
+    
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
+</html>
+
+
+</body>
+
 </html>
