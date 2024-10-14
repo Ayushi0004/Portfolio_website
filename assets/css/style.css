@@ -42,7 +42,7 @@ h1, h2, h3, h4, h5, h6 {
     background: #007bff;
     color: #fff;
     text-transform: uppercase;
-    transition: background 0.3s ease-in-out;
+    transition: background-color 0.3s ease-in-out;
 }
 
 #home .btn:hover {
@@ -187,7 +187,7 @@ h1, h2, h3, h4, h5, h6 {
     width: 8rem;
     transition: transform 0.5s ease, box-shadow 0.5s ease;
 }
-#skill2 button:hover {
+#skills button:hover {
     transform: scale(1.1);
     box-shadow: 0 0 20px rgba(247, 246, 249, 0.877);
 }
@@ -212,10 +212,11 @@ h1, h2, h3, h4, h5, h6 {
 #contact .form-control {
     border-radius: 10px;
     transition: box-shadow 0.3s;
+    border: 3px solid black;
 }
 
 #contact .form-control:focus {
-    box-shadow: 0 0 20px rgba(249, 246, 246, 0.877);
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.877);
 }
 
 #contact button[type="submit"] {
@@ -227,7 +228,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #contact button[type="submit"]:hover {
-    background-color: #0056b3;
+    background-color:#007bff ;
 }
 
 /* Footer */
